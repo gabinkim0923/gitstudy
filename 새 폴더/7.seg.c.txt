@@ -1,0 +1,35 @@
+7.seg.c
+
+#include "main.h"
+
+ void PowerOn_7_SEG(void)
+ {
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, SET);
+ }
+ void PowerOff_7_SEG(void)
+ {
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, RESET);
+ }
+  void On_7_SEG_OnePin(uint16_t pinNum)
+ {
+  HAL_GPIO_WritePin(GPIOC, pinNum, RESET);
+ }
+ void Off_7_SEG_OnePin(uint16_t pinNum)
+ {
+  HAL_GPIO_WritePin(GPIOC, pinNum, SET);
+ }
+
+
+
+7.seg.h
+
+#include "main.h"
+
+ void PowerOn_7_SEG(void);
+
+ void PowerOff_7_SEG(void);
+
+ void On_7_SEG_OnePin(uint16_t pinNum);
+
+ void Off_7_SEG_OnePin(uint16_t pinNum);
+
